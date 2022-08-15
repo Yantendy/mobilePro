@@ -1,0 +1,595 @@
+* {
+    box-sizing: border-box !important;
+    font-family: PingFangSC-regular, Tahoma, Lucida Grande, Verdana, Microsoft Yahei, STXihei, hei !important;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+.app {
+    margin: 0 auto;
+    background: #f4f4f4;
+    color: #000;
+    max-width: 540px;
+    margin: auto;
+}
+
+.header {
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 540px;
+    margin: auto;
+    background-color: #fff;
+    height: 50px;
+    padding: 12px 12px 6px;
+
+    .serch {
+        border: 1.8px solid #0086f6;
+        width: 100%;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        border-radius: 16px;
+
+        .iconfont {
+            margin-left: 12px;
+            font-size: 20px;
+            color: #666;
+        }
+
+        span {
+            margin-left: 6px;
+            color: #999;
+            font-size: 15px;
+        }
+
+    }
+
+}
+.swiper-pagination-bullet{
+    width: 4px !important;
+    height: 4px !important;
+    border-radius: 2px;
+    background-color: #ccc;
+    box-shadow: inherit;
+    margin: 0;
+}
+.swiper-pagination-bullet-active {
+    width: 14px !important;
+    height: 4px !important;
+    opacity: 1;
+    background: #007aff;
+    border-radius: 2px !important;
+}
+
+.nav-page {
+    max-width: 540px;
+    margin: auto;
+    padding-top: 50px;
+    background-color: #fff;
+
+    .nav-bar {
+        .mui-slider {
+            
+
+            .mui-slider-items {
+                padding: 6px 12px 2px;
+                display: flex;
+                font-size: 12px;
+                line-height: 15px;
+
+                .mui-grid-view.mui-grid-9 {
+                    background-color: #fff;
+                }
+
+                .mui-table-view {
+                    flex: 1;
+                    
+                    &:nth-child(1) {
+                        margin-left: 0;
+                        li {
+
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                background-color: #fff5f1;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        li {
+
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                background-color: #eff9ff;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        li {
+
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                background-color: #f2f5ff;
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        li {
+
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                background-color: #ecfcf8;
+                            }
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        li {
+
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                background-color: #fff9f2;
+                            }
+                        }
+                    }
+
+                    .first {
+                        border-top-left-radius: 8px;
+                        background-image: linear-gradient(180deg, #fa5956, #fb8650);
+
+                        p {
+                            color: #fff !important;
+                        }
+
+                    }
+
+                    .second {
+                        background-image: linear-gradient(180deg, #3c83fa, #50b2fa);
+
+                        p {
+                            color: #fff !important;
+                        }
+
+                    }
+
+                    .third {
+                        background-image: linear-gradient(0deg, #66a4ff, #5e80ff);
+
+                        p {
+                            color: #fff !important;
+                        }
+                    }
+
+                    .fourth {
+                        background-image: linear-gradient(180deg, #2fc3b6, #52d9b3);
+
+                        p {
+                            color: #fff !important;
+                        }
+                    }
+
+                    .fifth {
+                        border-top-right-radius: 8px;
+                        background-image: linear-gradient(0deg, #ffa846, #ff8939 99%);
+
+                        p {
+                            color: #fff !important;
+                        }
+                    }
+
+                    .item {
+                        height: 58px;
+                        &:first-child {
+                            margin-bottom: 1px;
+
+                        }
+
+                        &:nth-child(3) {
+                            margin-top: 1px;
+                        }
+
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            height: 100%;
+
+                            width: 100%;
+
+                            span {
+                                background: url(https://pic.c-ctrip.com/pic/platform/bbz/h5/h5home/v1/nav/main/hotel.png);
+                                width: 28px;
+                                height: 28px;
+                                margin-bottom: 4px;
+                                background-size: 28px auto;
+                                background-repeat: no-repeat;
+                            }
+
+                            p {
+                                font-size: 12px;
+                                text-align: center;
+                                color: #333;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            .mui-slider-items-right{
+                padding: 6px 12px 2px;
+                display: flex;
+                font-size: 12px;
+                flex-wrap: wrap;
+                line-height: 15px;
+                height: 185px;
+                .right-item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 20%;
+                    height: 58px;
+                    span{
+                        background-image: url(https://pic.c-ctrip.com/pic/platform/bbz/h5/h5home/v1/nav/sub/hpgs_guide.png);
+                        width: 28px;
+                        height: 28px;
+                        background-size: 28px auto;
+                        background-repeat: no-repeat;
+                        
+                    }
+                    p{
+                        color: #333;
+                    }
+                }
+            }
+            .mui-slider-indicator {
+                position: initial;
+                display: flex;
+                align-items: flex-start;
+                height: 24px;
+                justify-content: center;
+                padding-top: 4px;
+                background-image: linear-gradient(0deg, #f4f4f4, #fff);
+
+                .mui-indicator {
+                    margin: 0;
+                }
+
+                .switch {
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 2px;
+                    background-color: #ccc;
+                    box-shadow: initial;
+                    margin-right: 4px;
+                }
+
+                .mui-active {
+                    width: 14px;
+                    background-color: #0086f6;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.sub-banner {
+    max-width: 540px;
+    margin: auto;
+    background-color: transparent;
+
+    .banner-list {
+        display: flex;
+        justify-content: center;
+        background-color: #f4f4f4;
+        padding: 0 12px;
+        margin-left: -8px;
+        margin-bottom: 10px;
+    }
+
+    .sub-left {
+        position: relative;
+        flex: 1;
+        width: 50%;
+        padding: 8px;
+        margin-left: 8px;
+        border-radius: 8px;
+        background: #fff;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        .silder {
+            #slider {
+                .mui-slider-group {
+                    .mui-slider-item {
+                        border-radius: 6px;
+
+                        a {
+                            overflow: hidden;
+
+                            img {
+                                height: 84px;
+                                border-radius: 6px;
+                            }
+
+                            p {
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                position: absolute;
+                                bottom: 6px;
+                                left: 6px;
+                                right: 6px;
+                                border-radius: 0 6px 0 6px;
+                                font-size: 11px;
+                                line-height: 12px;
+                                font-weight: 700;
+                                background-color: transparent;
+                                color: #fff;
+                            }
+
+                            .info {
+                                height: 14px;
+                                line-height: 14px;
+                                padding: 0 3px;
+                                background: rgba(51, 51, 51, .8);
+                                border-radius: 6px 0 6px 0;
+                                font-size: 10px;
+                                color: #fff;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+
+                            }
+
+                        }
+
+                        .price {
+                            margin-top: 4px;
+                            height: 18px;
+                            line-height: 18px;
+                            overflow: hidden;
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #f60;
+                            padding-right: 2px;
+
+                            span {
+                                font-size: 11px;
+                                line-height: 1.1;
+                                color: #f60;
+                            }
+                        }
+                    }
+                }
+
+                .mui-slider-indicator {
+                    top: -10px;
+                    right: 10px;
+                    
+                    .switch {
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 2px;
+                        background-color: #ccc;
+                        box-shadow: inherit;
+                        margin: 0;
+                    }
+
+                    .mui-active {
+                        width: 14px;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .title a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+
+            img {
+                width: 73px;
+                height: 20px;
+            }
+
+            span {
+                height: 16px;
+                line-height: 16px;
+                border-radius: 2px;
+                font-size: 10px;
+                background: #ffebe3;
+                color: #ff4607;
+                padding: 1px 4px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .sub-right {
+        .title {
+            a {
+                span {
+                    color: #ae6e15;
+                    background: #fdefd2;
+                }
+            }
+        }
+
+        .block {
+            display: flex;
+
+            div {
+                position: relative;
+                flex: 1;
+                overflow: hidden;
+                margin-right: 2px;
+
+                .tag {
+                    position: absolute;
+                    top: 0;
+                    left: -2px;
+                    height: 14px;
+                    line-height: 14px;
+                    padding: 0 3px;
+                    background-image: linear-gradient(270deg, #f8e1bd, #e2c089);
+                    border-radius: 6px 0 6px 0;
+                    font-size: 10px;
+                    color: #663c00;
+                }
+
+                &:nth-child(2) {
+                    margin-left: 2px;
+                    margin-right: 0;
+                }
+
+                img {
+                    width: 100%;
+                    height: 84px;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }
+
+                p {
+                    font-size: 11px;
+                    color: #333;
+                    line-height: 1.1;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 0 12px 12px;
+    overflow: hidden;
+
+    .top {
+        overflow: hidden;
+        width: 100%;
+        border-radius: 6px;
+
+        img {
+            width: 100%;
+            // height: 88px;
+            border-radius: 6px;
+        }
+
+        margin-bottom: 12px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 12px;
+        padding-bottom: 50px;
+
+        .phone {
+            height: 30px;
+            width: 100%;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .phone-info{
+                height: 30px;
+                line-height: 30px;
+                border-radius: 4px;
+                text-align: center;
+                border: 1px solid #999;
+                min-width: 100px;
+            }
+            .iconfont {
+                margin-right: 2px;
+                font-size: 13px;
+            }
+        }
+        .tool-ver{
+            font-size: 12px;
+            p{
+                color: #666;
+            }
+            .ver-top{
+                display: flex;
+                justify-content: center;
+                margin-top: 13px;
+                span{
+                    &:first-child{
+                        margin-right: 48px;
+                    }
+                }
+            }
+            .ver-bottom{
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+.bar-tab{
+    
+    .mui-bar-tab{
+        height: 49px;
+        max-width: 540px;
+        margin: auto;
+        background-color: #fff;
+        box-shadow: initial;
+        display: flex;
+        align-items: center;
+
+        a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding-bottom: 5px;
+            .mui-tab-label{
+                font-size: 12px;
+                color: #666;
+            }
+            .desc{
+                background-image: url(https://webresource.c-ctrip.com/NFES/html5/1658904571110/_next/serverStatic/img/tabbar.png);
+                width: 32px;
+                height: 32px;
+                background-size: 32px auto;
+            }
+        }
+    }
+}
+.fixed-sign{
+    position: fixed;
+    right: 0;
+    bottom: 55px;
+    width: 76px;
+        height: 76px;
+    a{
+        display: block;
+        width: 76px;
+        height: 76px;
+        background-size: 76px;
+        background-image: url(https://webresource.c-ctrip.com/NFES/html5/1658904571110/_next/serverStatic/img/signin-d.png);
+    }
+}

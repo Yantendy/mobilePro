@@ -1,0 +1,154 @@
+.app .header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 0.88rem;
+  color: #333;
+}
+
+.app .header .left {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  height: 100%;
+  font-size: .7253rem;
+  min-width: 1rem;
+  padding: 0 0.4rem 0 0.32rem;
+}
+
+.app .header .tag {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e0e0e4;
+}
+
+.app .header .right {
+  font-size: .34rem;
+}
+
+.app .artical .title {
+  font-size: .26rem;
+  padding: 0.2rem 0.32rem;
+  color: #f70;
+  background-color: #fff8f2;
+}
+
+.app .artical .form {
+  background: #fff;
+  padding-bottom: 0.32rem;
+  margin-top: 0.16rem;
+}
+
+.app .artical .form .item {
+  display: flex;
+  padding: 0.32rem 0;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.app .artical .form .item .left {
+  line-height: .38rem;
+  width: 1.8rem;
+  margin-left: 0.32rem;
+  color: #333;
+  font-size: .3rem;
+}
+
+.app .artical .form .item .right {
+  position: relative;
+  color: #ccc;
+  width: 5.38rem;
+  line-height: .38rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.app .artical .form .item .right input {
+  line-height: .38rem;
+  width: 4.64rem;
+  border: none;
+  padding: 0;
+}
+
+.app .artical .form .item .right span {
+  font-size: .3rem;
+}
+
+.app .artical .form .item .right::after {
+  content: '';
+  position: absolute;
+  right: 0.352rem;
+  top: 50%;
+  width: 0.225rem;
+  height: 0.225rem;
+  border-right: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.app .artical .form .item .clear::after {
+  content: initial;
+}
+
+.app .artical .form .item::before {
+  content: '';
+  position: absolute;
+  width: 5.38rem;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  -webkit-transform: scaleY(0.51);
+  transform: scaleY(0.51);
+  background-color: #eee;
+}
+
+.app .out {
+  height: 100vh;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.app .out .fixed-one {
+  max-height: 94%;
+  min-height: 94%;
+  position: fixed;
+  background-color: red;
+  bottom: -94%;
+  right: 0;
+  left: 0;
+  transition: all .5s;
+}
+
+.app .out .fixed-one .tags {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  top: .2rem;
+}
+
+.app .out .show {
+  bottom: 0;
+  transition: all .5s;
+}
+
+.man {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 99999999;
+  height: 100vh;
+  transition: all .5s;
+}

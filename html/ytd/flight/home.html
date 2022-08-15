@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/ytd/mui.min.css">
+    <link rel="stylesheet" href="../../../css/ytd/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/ytd/flight-home.css">
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/ytd/font/iconfont.css">
+    <link rel="stylesheet" href="../../../css/ytd/flight-city.css">
+    <link rel="stylesheet" href="../../../css/ytd/flight-data.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="headers">
+            <header id="header" class="mui-bar mui-bar-nav">
+                <h1 class="mui-title">携程机票</h1>
+                <button class=" mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
+                    <a href="../../../html/ytd/index.html">
+                        <span class="iconfont icon-zuojiantou mui-icon mui-icon-left-nav">
+                        </span>
+                        <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/home-black.png" alt="">
+                    </a>
+                </button>
+                <a class="iconfont icon-gerenzhongxin mui-icon mui-icon-bars mui-pull-right dropdown dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                </a>
+                <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li style="border-bottom: none;"><a href="#">我的订单</a></li>
+                </ul>
+
+
+            </header>
+        </div>
+        <div class="flight-home">
+            <div class="home-bg">
+            </div>
+            <div class="serch-flight">
+                <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+                    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab"
+                                data-toggle="tab" aria-controls="home" aria-expanded="true">单程</a></li>
+                        <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab"
+                                data-toggle="tab" aria-controls="profile" aria-expanded="false">往返</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane  active " id="home" aria-labelledby="home-tab"
+                            style="position: relative;">
+                            <div id="copytop" class="city-wrap copytop">
+                                <h3 class="h33" onclick="act()">北京</h3>
+                                <div id="wraps" class="wrap-tag">
+                                    <div class="wraps">
+                                        <img id="imgs"
+                                            src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_circle.png"
+                                            alt="">
+                                        <img src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_icon.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <h3 class="city-sh" onclick="act()">上海</h3>
+                            </div>
+                            <div id="copy" class="city-wrap copy">
+                                <h3>上海</h3>
+                                <div id="wraps" class="wrap-tag">
+                                    <div class="wraps">
+                                        <img id="imgss" class=""
+                                            src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_circle.png"
+                                            alt="">
+                                        <img src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_icon.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <h3 class="h33-s" onclick="act()">北京</h3>
+                            </div>
+                            <div class="city-wrap city-time">
+                                <div class="left">
+                                    <h3 class="data-month" onclick="acts()">08月02日<span class="specific">后天</span></h3>
+                                </div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="city-info">
+                                <div class="left">
+                                    <h4 class="eco">经济舱</h4>
+                                </div>
+                                <div class="right">
+                                    <input onclick="input()" id="input" class="iconfont icon-weixuanzhongyuanquan"
+                                        name="checkbox" value="Item 1" type="checkbox">
+                                    <span>机票+酒店</span>
+                                    <span>更省心</span>
+                                </div>
+                            </div>
+                            <div class="city-serch">
+                                <a href="../flight/flight-serch.html">搜索</a>
+                            </div>
+                            <div class="city-desc">
+                                <ul>
+                                    <li>机票订单</li>
+                                    <li>航班助手</li>
+                                    <li>在线选座</li>
+                                    <li>乘机指南</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane " id="profile" aria-labelledby="profile-tab">
+                            <div id="copytop" class="city-wrap copytop">
+                                <h3 class="h33" onclick="">北京</h3>
+                                <div id="wraps" class="wrap-tag">
+                                    <div class="wraps">
+                                        <img id="imgs"
+                                            src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_circle.png"
+                                            alt="">
+                                        <img src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_icon.png"
+                                            alt="" style="top: 1.536rem;">
+                                    </div>
+                                </div>
+                                <h3>上海</h3>
+                            </div>
+                            <div id="copy" class="city-wrap copy">
+                                <h3>上海</h3>
+                                <div id="wraps" class="wrap-tag">
+                                    <div class="wraps">
+                                        <img id="imgs" class=""
+                                            src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_circle.png"
+                                            alt="">
+                                        <img src="https://pages.c-ctrip.com/flight_h5/swift/home/city_switch_icon.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <h3>北京</h3>
+                            </div>
+                            <div class="city-wrap city-time">
+                                <div class="left">
+                                    <h3>07月31日<span>后天</span></h3>
+                                </div>
+                                <div class="left right">
+                                    <h3>08月18日<span>周四</span></h3>
+                                </div>
+                            </div>
+                            <div class="city-info">
+                                <div class="left">
+                                    <h4>经济舱</h4>
+                                </div>
+                                <div class="right">
+                                    <input class="iconfont icon-weixuanzhongyuanquan" name="checkbox" value="Item 1"
+                                        type="checkbox">
+                                    <span>机票+酒店</span>
+                                    <span>更省心</span>
+                                </div>
+                            </div>
+                            <div class="city-serch">
+                                搜索
+                            </div>
+                            <div class="city-desc">
+                                <ul>
+                                    <li>机票订单</li>
+                                    <li>航班助手</li>
+                                    <li>在线选座</li>
+                                    <li>乘机指南</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="roration">
+                    <div id="slider" class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop"
+                            style="transform: translate3d(0px, 0px, 0px) translateZ(0px) !important;">
+                            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="https://pages.c-ctrip.com/flight_h5/swift/home/xklb_new.png">
+                                </a>
+                            </div>
+                            <!-- 第一张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="https://pages.c-ctrip.com/flight_h5/swift/home/yhqzjy.jpg">
+                                </a>
+                            </div>
+                            <!-- 第二张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="https://pages.c-ctrip.com/flight_h5/swift/home/xklb_new.png">
+                                </a>
+                            </div>
+                            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="https://pages.c-ctrip.com/flight_h5/swift/home/yhqzjy.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                            <div class="mui-indicator switch mui-active"></div>
+                            <div class="mui-indicator switch"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="home-container">
+            <div class="super">
+                <div class="title">
+                    <div class="left">
+                        <img src="https://pages.ctrip.com/flight_h5/swift/home/sale_fire.png" alt="">
+                        超值低价
+                    </div>
+                    <div class="right">
+                        查看更多
+                        <span class="iconfont icon-youjiantou"></span>
+                    </div>
+                </div>
+                <ul class="super-list">
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price"><i>¥</i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price"><i>¥</i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price">
+                            <i><i>¥</i></i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price"><i>¥</i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price">
+                            <i><i>¥</i></i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <h3>北京
+                            <img src="https://pages.c-ctrip.com/flight_h5/tinyapp/home/single_trip.png" alt="">
+                            上海
+                        </h3>
+                        <p class="data">08-16 周二出发</p>
+                        <p class="price"><i>¥</i>313
+                            <span>1.8折</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="super artical">
+                <div class="title">
+                    <div class="left">
+                        蜜月就是要浪漫到爆炸
+                    </div>
+                    <div class="right">
+                        查看更多
+                        <span class="iconfont icon-youjiantou"></span>
+                    </div>
+                </div>
+                <ul class="artical-list">
+                    <li class="item">
+                        <img src="https://pic.c-ctrip.com/flight/fuzzy/HGH/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>杭州</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+
+                    </li>
+                    <li class="item">
+                        <img src="https://pic.c-ctrip.com/flight/fuzzy/SYX/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>三亚</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <img src="	https://pic.c-ctrip.com/flight/fuzzy/XMN/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>厦门</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="super artical">
+                <div class="title">
+                    <div class="left">
+                        适合爸妈的疗养圣地
+                    </div>
+                    <div class="right">
+                        查看更多
+                        <span class="iconfont icon-youjiantou"></span>
+                    </div>
+                </div>
+                <ul class="artical-list">
+                    <li class="item">
+                        <img src="https://pic.c-ctrip.com/flight/fuzzy/CTU/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>成都</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+
+                    </li>
+                    <li class="item">
+                        <img src="https://pic.c-ctrip.com/flight/fuzzy/SYX/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>三亚</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <img src="https://pic.c-ctrip.com/flight/fuzzy/SIA/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>西安</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="super artical">
+                <div class="title">
+                    <div class="left">
+                        蜜月就是要浪漫到爆炸
+                    </div>
+                    <div class="right">
+                        查看更多
+                        <span class="iconfont icon-youjiantou"></span>
+                    </div>
+                </div>
+                <ul class="artical-list">
+                    <li class="item">
+                        <img src="https://pic.c-ctrip.com/flight/fuzzy/HGH/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>杭州</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+
+                    </li>
+                    <li class="item">
+                        <img src="https://pic.c-ctrip.com/flight/fuzzy/HGH/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>杭州</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <img src="https://pic.c-ctrip.com/flight/fuzzy/HGH/582.jpg" alt="">
+                        <div class="desc">
+                            <h3>杭州</h3>
+                            <p class="info">为你推荐</p>
+                            <p class="price">
+                                往返￥<span>470</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="top">
+                <img src="https://pages.c-ctrip.com/flight_h5/swift/service_assurance/title_blue.png" alt="">
+            </div>
+            <ul class="midd">
+                <li class="item">
+                    <img src="https://pages.c-ctrip.com/flight_h5/swift/service_assurance/journeyAssure_gray.png"
+                        alt="">
+                    <span>行程保障</span>
+                </li>
+                <li class="item">
+                    <img src="https://pages.c-ctrip.com/flight_h5/swift/service_assurance/journeyAssure_gray.png"
+                        alt="">
+                    <span>行程保障</span>
+                </li>
+                <li class="item">
+                    <img src="https://pages.c-ctrip.com/flight_h5/swift/service_assurance/journeyAssure_gray.png"
+                        alt="">
+                    <span>行程保障</span>
+                </li>
+                <li class="item">
+                    <img src="https://pages.c-ctrip.com/flight_h5/swift/service_assurance/journeyAssure_gray.png"
+                        alt="">
+                    <span>行程保障</span>
+                </li>
+                <li class="item">
+                    <img src="https://pages.c-ctrip.com/flight_h5/swift/service_assurance/journeyAssure_gray.png"
+                        alt="">
+                    <span>行程保障</span>
+                </li>
+                <li class="item">
+                    <img src="https://pages.c-ctrip.com/flight_h5/swift/service_assurance/journeyAssure_gray.png"
+                        alt="">
+                    <span>行程保障</span>
+                </li>
+            </ul>
+            <div class="foo">
+                机票预订提供方：上海华程西南国际旅行社有限公司
+            </div>
+        </div>
+
+    </div>
+
+    <div class="apps">
+        <div class="headers">
+            <header id="header" class="mui-bar mui-bar-nav">
+                <a id="back" class=" iconfont icon-zuojiantou  mui-pull-left" onclick="back()"></a>
+                <h1 class="mui-title">选择出发城市</h1>
+            </header>
+        </div>
+        <div class="serch-button mui-bar">
+            <input type="text" placeholder="请输入城市名(如北京/beijing/bj)">
+        </div>
+        <div class="tabs">
+            <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+                <ul id="myTabs" class="nav nav-tabs mui-bar " role="tablist">
+                    <li role="presentation" class="active"><a href="#homes" id="home-tab" role="tab" data-toggle="tab"
+                            aria-controls="home" aria-expanded="true">国内</a></li>
+                    <li role="presentation" class=""><a href="#profiles" role="tab" id="profile-tab" data-toggle="tab"
+                            aria-controls="profile" aria-expanded="false">国际/港澳台</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div role="tabpanel" class="tab-pane  active " id="homes" aria-labelledby="home-tab"
+                        style="position: relative;">
+                        <div class="allcity">
+                            <div class="top">
+                                <h3>热门城市</h3>
+                            </div>
+                            <ul class="city-list">
+                                <li class="item activess">北京</li>
+                                <li class="item ">上海</li>
+                                <li class="item">成都</li>
+                                <li class="item">广州</li>
+                                <li class="item">重庆</li>
+                                <li class="item">西安</li>
+                                <li class="item">昆明</li>
+                                <li class="item">深圳</li>
+                                <li class="item">郑州</li>
+                                <li class="item">哈尔滨</li>
+                                <li class="item">海口</li>
+                                <li class="item">杭州</li>
+                                <li class="item">三亚</li>
+                                <li class="item">乌鲁木齐</li>
+                                <li class="item">青岛</li>
+                                <li class="item">南京</li>
+                                <li class="item">天津</li>
+                                <li class="item">贵阳</li>
+                                <li class="item">沈阳</li>
+                                <li class="item">厦门</li>
+                            </ul>
+                        </div>
+                        <div class="allcity letter">
+                            <div class="top">
+                                <h3>热门城市</h3>
+                            </div>
+                            <ul class="city-list">
+                                <li class="item"><a href="#A">A</a></li>
+                                <li class="item"><a href="#B">B</a></li>
+                                <li class="item">C</li>
+                                <li class="item">D</li>
+                                <li class="item">E</li>
+                                <li class="item">F</li>
+                                <li class="item">G</li>
+                                <li class="item">H</li>
+                                <li class="item">I</li>
+                                <li class="item">J</li>
+                                <li class="item">K</li>
+                                <li class="item">L</li>
+                                <li class="item">M</li>
+                                <li class="item">N</li>
+                                <li class="item">O</li>
+                                <li class="item">P</li>
+                                <li class="item">Q</li>
+                                <li class="item">R</li>
+                                <li class="item">S</li>
+                                <li class="item">T</li>
+                                <li class="item">U</li>
+                                <li class="item">V</li>
+                                <li class="item">W</li>
+                                <li class="item">X</li>
+                                <li class="item">Y</li>
+                                <li class="item">Z</li>
+                            </ul>
+                        </div>
+                        <div class="allcity A">
+                            <div id="A" class="top">
+                                <h3>A</h3>
+                            </div>
+                            <ul class="city-list">
+                                <li class="item">澳门</li>
+                                <li class="item">阿里</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+
+                            </ul>
+                        </div>
+                        <div class="allcity B">
+                            <div id="B" class="top">
+                                <h3>B</h3>
+                            </div>
+                            <ul class="city-list">
+                                <li class="item">澳门</li>
+                                <li class="item">阿里</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+                                <li class="item">安康</li>
+                                <li class="item">阿克苏</li>
+                                <li class="item">阿勒泰</li>
+                                <li class="item">安庆</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane " id="profiles" aria-labelledby="profile-tab">
+                        <div class="tab-city">
+                            <ul class="left">
+                                <li class="item active">历史/热门</li>
+                                <li class="item">A-Z</li>
+                                <li class="item">免签落地签</li>
+                                <li class="item">中国港澳台</li>
+                                <li class="item">东南亚</li>
+                                <li class="item">日韩</li>
+                                <li class="item">欧洲</li>
+                                <li class="item">美洲</li>
+                                <li class="item">亚洲其他</li>
+                                <li class="item">大洋州</li>
+                                <li class="item">印度</li>
+                                <li class="item">历史/热门</li>
+                            
+                            </ul>
+                            <div class="right">
+                                <div class="info active">
+                                    <div class="title">热门</div>
+                                    <ul class="citys">
+                                        <li class="item">中国香港</li>
+                                        <li class="item">中国香港
+                                            <div class="tag">
+                                                落地签
+                                            </div>
+                                        </li>
+                                        <li class="item">中国香港</li>
+                                        <li class="item">中国香港</li>
+                                        <li class="item">中国香港</li>
+                                        <li class="item">中国香港</li>
+                                        <li class="item">中国香港</li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">字母索引</div>
+                                    <ul class="citys">
+                                        <li class="items">A</li>
+                                        <li class="items">B</li>
+                                        <li class="items">C</li>
+                                        <li class="items">D</li>
+                                        <li class="items">E</li>
+                                        <li class="items">F</li>
+                                        <li class="items">G</li>
+                                        <li class="items">H</li>
+                                        <li class="items">I</li>
+                                        <li class="items">J</li>
+                                        <li class="items">K</li>
+                                        <li class="items">L</li>
+                                        <li class="items">M</li>
+                                        <li class="items">N</li>
+                                        <li class="items">O</li>
+                                        <li class="items">P</li>
+                                        <li class="items">Q</li>
+                                        <li class="items">R</li>
+                                        <li class="items">S</li>
+                                        <li class="items">T</li>
+                                        <li class="items">U</li>
+                                        <li class="items">V</li>
+                                        <li class="items">W</li>
+                                        <li class="items">X</li>
+                                        <li class="items">Y</li>
+                                        <li class="items">Z</li>
+                                    </ul>
+                                    <div class="title">A</div>
+                                    <ul class="citys">
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">免签</div>
+                                    <ul class="citys">
+                                       <li class="city-item">
+                                            <p class="posi">巴厘岛</p>
+                                            <p class="country">印度尼西亚</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">济州岛</p>
+                                            <p class="country">韩国</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                       <li class="city-item">
+                                            <p class="posi">澳门</p>
+                                            <p class="country">中国 MFM</p>
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">中国香港</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            香港
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">泰国</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            曼谷
+                                       </li>
+                                       <li class="city-items">
+                                            普吉岛
+                                       </li>
+                                       <li class="city-items">
+                                            清迈
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">日本</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            东京
+                                       </li>
+                                       <li class="city-items">
+                                            大版
+                                       </li>
+                                       <li class="city-items">
+                                            名古屋
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">英国</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            伦敦
+                                       </li>
+                                       <li class="city-items">
+                                            曼彻斯特
+                                       </li>
+                                       <li class="city-items">
+                                            爱丁堡
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">美国</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            洛杉矶
+                                       </li>
+                                       <li class="city-items">
+                                            纽约
+                                       </li>
+                                       <li class="city-items">
+                                            华盛顿
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">伊朗</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            得黑子
+                                       </li>
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">澳大利亚</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            悉尼
+                                       </li>
+                                       <li class="city-items">
+                                            墨尔本
+                                       </li>
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">中国香港</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                    </ul>
+                                </div>
+                                <div class="info">
+                                    <div class="title">中国香港</div>
+                                    <ul class="citys">
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                       <li class="city-items">
+                                            澳门
+                                       </li>
+                                    </ul>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-data">
+        <div class="headers">
+            <header id="header" class="mui-bar mui-bar-nav">
+                <a id="backq" class=" iconfont icon-zuojiantou  mui-pull-left" onclick="backq()"></a>
+                <h1 class="mui-title">选择去程日期</h1>
+            </header>
+            <ul class="week mui-bar mui-bar-nav">
+                <li class="week-item">日</li>
+                <li class="week-item">一</li>
+                <li class="week-item">二</li>
+                <li class="week-item">三</li>
+                <li class="week-item">四</li>
+                <li class="week-item">五</li>
+                <li class="week-item">六</li>
+            </ul>
+        </div>
+        <div class="data-month">
+            <div class="data-list eight">
+                <div class="data-top">2022年8月</div>
+                <ul class="data-day">
+                    <li class="item"></li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">1</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">今天</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">3</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">4</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">5</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">6</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">7</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">8</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">9</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">10</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">11</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">12</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">13</p>
+                        <p class="price"></p>
+                    </li>
+                    <li class="item item-today">
+                        <p class="festival"></p>
+                        <p class="day">14</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">15</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">16</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">17</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">18</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">19</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">20</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">21</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">22</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">23</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">24</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">25</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">26</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">27</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">28</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">29</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">30</p>
+                        <p class="price">¥408</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="data-list nine">
+                <div class="data-top">2022年9月</div>
+                <ul class="data-day">
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">1</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">2</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">3</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">4</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">5</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">6</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">7</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">8</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">9</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">中秋节</p>
+                        <p class="day">10</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">11</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">12</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">13</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">14</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">15</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">16</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">17</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">18</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">19</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">20</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">21</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">22</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">23</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">24</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">25</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">26</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">27</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">28</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">29</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">30</p>
+                        <p class="price">¥408</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="data-list ten">
+                <div class="data-top">2022年10月</div>
+                <ul class="data-day">
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item">
+                        <p class="festival">国庆节</p>
+                        <p class="day">1</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">2</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">3</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">4</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">5</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">6</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">7</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">8</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival">休</p>
+                        <p class="day">9</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">10</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">11</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">12</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">13</p>
+                        <p class="price">¥488</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">14</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">15</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">16</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">17</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">18</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">19</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">20</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">21</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">22</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">23</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">24</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">25</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">26</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">27</p>
+                        <p class="price price-color">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">28</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">29</p>
+                        <p class="price">¥408</p>
+                    </li>
+                    <li class="item">
+                        <p class="festival"></p>
+                        <p class="day">30</p>
+                        <p class="price">¥408</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="economy">
+        <div class="box">
+            <div class="header">
+                <span class="tag">12</span>
+                <span>选择舱位</span>
+            </div>
+            <div class="list">
+                <div class="item eco">
+                    经济舱
+                    <img class="no"
+                        src="https://pages.c-ctrip.com/flight_h5/tinyapp/icons/index-searchcard/icon-layer-choose.svg"
+                        alt="">
+                </div>
+                <div class="item head">
+                    公务舱/头等舱
+                    <img class="no"
+                        src="https://pages.c-ctrip.com/flight_h5/tinyapp/icons/index-searchcard/icon-layer-choose.svg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../css/ytd/jquery/jq.js"></script>
+    <script src="../../../js/ytd/mui.min.js"></script>
+    <script src="../../../css/ytd/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        var tabCity = document.querySelectorAll('.tab-city .left .item')
+        console.log(tabCity)
+        var infoCity = document.querySelectorAll('.tab-city .right .info')
+        console.log(infoCity)
+        var rightActive = document.querySelectorAll('.tab-city .right li')
+        console.log(rightActive)
+        tabCity.forEach((val,index)=>{
+            val.onclick=()=>{
+                tabCity.forEach((t,i)=>{
+                    t.className = 'item'
+                    infoCity[i].className = 'info'
+                })
+                val.className = 'item active'
+                infoCity[index].className = 'info active'
+            }
+        })
+
+
+    </script>
+    <script>
+        var tags = document.querySelector('.economy .tag')
+        var info = document.querySelector('.city-info .left')
+        var body = document.querySelector('body')
+        var economy = document.querySelector('.economy')
+        var items = document.querySelectorAll('.economy .list .item')
+        var eco = document.querySelector('.eco')
+
+        info.onclick = function () {
+            body.className = 'body'
+            economy.style.display = 'block'
+        }
+        tags.onclick = function () {
+            body.className = ''
+            economy.style.display = 'none'
+        }
+
+        items.forEach(function (val, index) {
+            val.onclick = function (e) {
+
+                items.forEach(function (t, i) {
+                    t.className = 'item'
+                })
+                body.className = ''
+                economy.style.display = 'none'
+                val.className = 'item color'
+
+                eco.innerHTML = val.innerText
+
+            }
+        })
+
+        var input = document.getElementById('input')
+        input.onclick = function () {
+            if (input.id == "input") {
+                //todo:换iconfont
+            }
+        }
+    </script>
+    <script>
+
+
+        var appData = document.querySelector('.app-data')
+        var dis = document.querySelector('.h33')
+        var app = document.querySelector('.app')
+        var apps = document.querySelector('.apps')
+        var backs = document.getElementById('back')
+        var backqs = document.getElementById('backq')
+        var h33s = document.querySelector('.h33-s')
+        var month = document.querySelector('.data-month')
+        function act() {
+            if (dis.className == 'h33' || h33s.className == 'h33-s' || dis.className == '') {
+                h33s.className = ''
+                dis.className = ''
+                app.style.display = 'none'
+                apps.style.display = 'block'
+                // apps.style.transform = 'translateX(-375px)'
+                app.style.transition = 'all 1s'
+
+            } else {
+                h33s.className = 'h33s'
+                dis.className = 'h33'
+                app.style.display = 'block'
+                apps.style.display = 'none'
+            }
+        }
+        function acts() {
+            if (month.className == 'data-month' || month.className == '') {
+                month.className = 'data-month'
+                app.style.display = 'none'
+                apps.style.display = 'none'
+                appData.style.display = 'block'
+
+            } else {
+                month.className = 'data-month'
+                app.style.display = 'block'
+                apps.style.display = 'none'
+                appData.style.display = 'none'
+            }
+        }
+        function back() {
+            if (backs.id == 'back' || backs.id == '') {
+                backs.id = ''
+                app.style.display = 'block'
+                apps.style.display = 'none'
+            } else {
+                backs.id = 'back'
+                app.style.display = 'none'
+                apps.style.display = 'block'
+            }
+        }
+        function backq() {
+            if (backqs.id == 'back') {
+                backqs.id = ''
+                appData.style.display = 'block'
+                apps.style.display = 'none'
+                app.style.display = 'none'
+            } else {
+                backqs.id = ''
+                appData.style.display = 'none'
+                apps.style.display = 'none'
+                app.style.display = 'block'
+            }
+        }
+        var city = document.querySelectorAll('.city-list .item')
+        console.log(city[0])
+        city.forEach(function (val, index) {
+            val.onclick = function () {
+                console.log(val)
+                city.forEach(function (t, i) {
+                    t.className = 'item'
+                    console.log(t)
+                })
+                val.className = 'item activess'
+                app.style.display = 'block'
+                apps.style.display = 'none'
+                dis.innerHTML = val.innerHTML
+                h33s.innerHTML = val.innerHTML
+            }
+        })
+        var dataDay = document.querySelectorAll(".data-day li")
+        var specific = document.querySelector('.data-month .specific')
+        var nine = document.querySelector('.data-list.nine')
+        // console.log(nine)
+        dataDay.forEach(function (val1, index1) {
+            val1.onclick = function (e) {
+                dataDay.forEach(function (i, j) {
+                    i.className = 'item'
+                })
+                val1.className = 'item item-today'
+                var p = document.querySelectorAll('.item.item-today p')
+                console.log(val1.parentNode.parentNode)
+                if (p[1].innerHTML < 10 && val1.parentNode.parentNode.className == 'data-list eight') {
+                    var d = document.querySelector('.data-list.eight .data-top')
+                    specific = '周一'
+                    month.innerHTML = '0' + d.innerHTML[5] + '月0' + p[1].innerHTML + '日' + `
+                    <span class="specific">${specific}</span>
+                    `;
+
+                } else if (p[1].innerHTML >= 10 && val1.parentNode.parentNode.className == 'data-list eight') {
+                    var d = document.querySelector('.data-list.eight .data-top')
+                    // console.log(d.innerHTML)
+                    specific = '周一'
+                    month.innerHTML = '0' + d.innerHTML[5] + '月' + p[1].innerHTML + '日' + `
+                    <span class="specific">${specific}</span>
+                    `;
+                }
+
+
+                if (p[1].innerHTML < 10 && val1.parentNode.parentNode.className == 'data-list ten') {
+                    var ff = document.querySelector('.data-list.ten .data-top')
+                    specific = '周一'
+                    month.innerHTML = ff.innerHTML[5] + ff.innerHTML[6] + '月0' + p[1].innerHTML + '日' + `
+                    <span class="specific">${specific}</span>
+                    `;
+
+                }
+                else if (p[1].innerHTML >= 10 && val1.parentNode.parentNode.className == 'data-list ten') {
+                    var ff = document.querySelector('.data-list.ten .data-top')
+                    specific = '周一'
+                    month.innerHTML = ff.innerHTML[5] + ff.innerHTML[6] + '月' + p[1].innerHTML + '日' + `
+                    <span class="specific">${specific}</span>
+                    `;
+                }
+
+
+
+                if (p[1].innerHTML < 10 && val1.parentNode.parentNode.className == 'data-list nine') {
+                    var e = document.querySelector('.data-list.nine .data-top')
+                    specific = '周二'
+                    month.innerHTML = '0' + e.innerHTML[5] + '月0' + p[1].innerHTML + '日' + `
+                    <span class="specific">${specific}</span>
+                    `;
+                } else if (p[1].innerHTML >= 10 && val1.parentNode.parentNode.className == 'data-list nine') {
+                    var e = document.querySelector('.data-list.nine .data-top')
+                    specific = '周二'
+                    month.innerHTML = '0' + e.innerHTML[5] + '月' + p[1].innerHTML + '日' + `
+                    <span class="specific">${specific}</span>
+                    `;
+                }
+
+
+                app.style.display = 'block'
+                apps.style.display = 'none'
+                appData.style.display = 'none'
+            }
+        })
+
+
+
+        var copy = document.querySelectorAll('.wraps')
+        var c1 = document.getElementById('copy')
+        var imgs = document.getElementById('imgs')
+        var imgss = document.getElementById('imgss')
+        var c2 = document.getElementById('copytop')
+        // console.log(copy[0])
+        copy[0].onclick = function () {
+            // console.log(111)
+            if (imgs.className == '' || imgss.className == '' || imgs.className == 'actives') {
+                // console.log(imgs)
+                imgs.className = 'actives'
+                imgss.className = 'actives'
+                c1.className = 'city-wrap copytop'
+                c2.className = 'city-wrap copy'
+            } else {
+                imgs.className = ''
+                imgss.className = ''
+                c1.className = 'city-wrap copy'
+                c2.className = 'city-wrap copytop'
+            }
+
+        }
+        copy[1].onclick = function () {
+            console.log(111)
+            if (imgs.className == '' || imgss.className == '') {
+                // console.log(imgs)
+                imgs.className = 'actives'
+                imgss.className = 'actives'
+                c1.className = 'city-wrap copytop'
+                c2.className = 'city-wrap copy'
+            } else {
+                imgs.className = ''
+                imgss.className = ''
+                c1.className = 'city-wrap copy'
+                c2.className = 'city-wrap copytop'
+            }
+
+        }
+
+
+        //     var circl = document.querySelectorAll('.wraps img')
+        //     var wraps = document.querySelector('.wraps')
+        //     console.log(circl)
+        //     var index = 0
+        //     function change(boo){
+        //         if(boo === 1){
+        //             circl.className='circl'
+        //         }
+
+        //     }
+        //     wraps.onclick = function (e){
+        //     if(e.target.className === 'wraps'){
+        //         console.log(111)
+        //         change(1)
+        //     }
+        // }
+
+
+        // window.onload = function () {
+        //     var circl = document.querySelector('.wrap-tag img')
+        //     var wrap = document.querySelector('.wrap-tag')
+        //         wrap.onclick = function () {
+        //             circl.className = 'circl'
+        //         }
+        // }
+
+
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        var slider = mui("#slider");
+
+        slider.slider({
+            interval: 1000
+        });
+
+        !(function (x) {
+            function w() {
+                var s = x.document,
+                    r = s.documentElement,
+                    a = r.getBoundingClientRect().width;
+                var ratio = (40 * 750) / 640;
+                if (a >= 640) {
+                    r.style.fontSize = '40px';
+                } else {
+                    if (a <= 320) {
+                        r.style.fontSize = '20px';
+                    } else {
+                        r.style.fontSize = (a * ratio) / 750 + 'px';
+                    }
+                }
+            }
+            x.addEventListener('resize', function () {
+                w();
+            });
+            w();
+        })(window);
+
+    </script>
+
+    <!-- <script>
+        fetch('http://m.taoyuewenhua.com/ajax/book_mall?ctype=2&seed=8906').then(res=>{
+            return res.json()
+        }).then(res1=>{
+            console.log(res1,333)
+        }).catch(err=>{
+            console.log(err)
+        })
+    </script> -->
+</body>
+
+</html>

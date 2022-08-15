@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/ytd/checkin.css">
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/ytd/font/iconfont.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">  
+        <div class="header">
+            <div class="left">
+                <
+            </div>
+            <div class="right">
+                在线选座
+            </div>
+            <div class="tag">
+
+            </div>
+        </div>
+        <div class="artical">
+            <div class="title">
+                不在携程购买的机票，也可以在携程办理在线选座（仅限国内航班）
+            </div>
+            <ul class="form">
+                <li class="item">
+                    <div class="left">
+                        航空公司
+                    </div>
+                    <div class="right mantle one">
+                        <span>
+                            请选择航空公司
+                        </span>
+
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="left">
+                        航空公司
+                    </div>
+                    <div class="right clear">
+                        <input type="text" placeholder="请输入乘机人姓名">
+
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="left">
+                        航空公司
+                    </div>
+                    <div class="right mantle two">
+                        <span>
+                            请选择航空公司
+                        </span>
+
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="left">
+                        航空公司
+                    </div>
+                    <div class="right clear">
+                        <input type="text" placeholder="请输入乘机人姓名">
+
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="left">
+                        航空公司
+                    </div>
+                    <div class="right clear">
+                        <input type="text" placeholder="请输入乘机人姓名">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="out">
+            <div class="fixed-one">
+                <div class="tags">
+                    ×
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+    <script>
+        var fixOne = document.querySelector('.fixed-one')
+        var right = document.querySelectorAll('.form .mantle')
+        var tag = document.querySelector('.tags')
+        var body = document.querySelector('body')
+        var title = document.querySelector('.artical .title')
+        console.log(fixOne)
+        right.forEach((val)=>{
+            val.onclick=(e)=>{
+                if(e.target.className == 'right mantle one'){
+                    fixOne.classList.add('show')
+                    body.classList.add('man')
+                    title.style.backgroundColor= '#7f7f7f'
+                }
+                if(e.target.className == 'right mantle two'){
+                    console.log(222)
+                }
+            }
+        })
+        tag.onclick=()=>{
+            fixOne.classList.remove('show')
+            body.classList.remove('man')
+            title.style.backgroundColor= '#fff8f2'
+        }
+
+        
+        !(function (x) {
+            function w() {
+                var s = x.document,
+                    r = s.documentElement,
+                    a = r.getBoundingClientRect().width;
+                    console.log(a)
+                var ratio = (85 * 750) / 640;
+                if (a >= 640) {
+                    r.style.fontSize = '50px';
+                } else {
+                    if (a <= 320) {
+                        r.style.fontSize = '50px';
+                    } else {
+                        r.style.fontSize = (a * ratio) / 750 + 'px';
+                    }
+                }
+            }
+            x.addEventListener('resize', function () {
+                w();
+            });
+            w();
+        })(window);
+    </script>
+</body>
+</html>
