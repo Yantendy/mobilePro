@@ -2805,11 +2805,9 @@
         for (let t = 0; t < money.length; t++) {
             temps[t] = money[t].parentNode.parentNode.parentNode
         }
-        console.log(temps)
         fixedLi[1].onclick = () => {
             var temp = []
             var data = []
-            console.log(money)
             for (let i = 0; i < money.length; i++) {
                 temp[i] = money[i].innerHTML
                 // data[i] = money[i]
@@ -2818,8 +2816,6 @@
             temp.sort((a, b) => {
                 return a - b
             })
-            console.log(temp)
-            console.log(data)
 
             for (let j = 0; j < temp.length; j++) {
                 // console.log(temp[j]) 
@@ -2835,10 +2831,8 @@
         var btn = document.querySelectorAll('.button')
         var body = document.querySelector('body')
         var mantle = document.querySelector('.mantle')
-        console.log(btn)
         btn.forEach((val)=>{
             val.onclick=()=>{
-                console.log(val.parentNode)
                 val.parentNode.remove()
                 var newb = document.querySelectorAll('.button')
                 if(newb.length==0){

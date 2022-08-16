@@ -1448,12 +1448,16 @@
     <script src="../../../js/ytd/mui.min.js"></script>
     <script src="../../../css/ytd/bootstrap/js/bootstrap.min.js"></script>
     <script>
+        var arr = [
+            '#',
+            '#',
+            './checkin.html',
+            '#'
+        ]
         var tabCity = document.querySelectorAll('.tab-city .left .item')
-        console.log(tabCity)
         var infoCity = document.querySelectorAll('.tab-city .right .info')
-        console.log(infoCity)
         var rightActive = document.querySelectorAll('.tab-city .right li')
-        console.log(rightActive)
+        var cityDesc = document.querySelectorAll('.active .city-desc li')
         tabCity.forEach((val,index)=>{
             val.onclick=()=>{
                 tabCity.forEach((t,i)=>{
@@ -1462,6 +1466,11 @@
                 })
                 val.className = 'item active'
                 infoCity[index].className = 'info active'
+            }
+        })
+        cityDesc.forEach((val,index)=>{
+            val.onclick=()=>{
+                window.location.href= `${arr[index]}`
             }
         })
 
@@ -1572,25 +1581,23 @@
             }
         }
         var city = document.querySelectorAll('.city-list .item')
-        console.log(city[0])
         city.forEach(function (val, index) {
             val.onclick = function () {
-                console.log(val)
                 city.forEach(function (t, i) {
                     t.className = 'item'
-                    console.log(t)
                 })
                 val.className = 'item activess'
                 app.style.display = 'block'
                 apps.style.display = 'none'
                 dis.innerHTML = val.innerHTML
                 h33s.innerHTML = val.innerHTML
+                window.scrollTo(0,0)
             }
+
         })
         var dataDay = document.querySelectorAll(".data-day li")
         var specific = document.querySelector('.data-month .specific')
         var nine = document.querySelector('.data-list.nine')
-        // console.log(nine)
         dataDay.forEach(function (val1, index1) {
             val1.onclick = function (e) {
                 dataDay.forEach(function (i, j) {
@@ -1598,7 +1605,6 @@
                 })
                 val1.className = 'item item-today'
                 var p = document.querySelectorAll('.item.item-today p')
-                console.log(val1.parentNode.parentNode)
                 if (p[1].innerHTML < 10 && val1.parentNode.parentNode.className == 'data-list eight') {
                     var d = document.querySelector('.data-list.eight .data-top')
                     specific = '周一'
@@ -1608,7 +1614,6 @@
 
                 } else if (p[1].innerHTML >= 10 && val1.parentNode.parentNode.className == 'data-list eight') {
                     var d = document.querySelector('.data-list.eight .data-top')
-                    // console.log(d.innerHTML)
                     specific = '周一'
                     month.innerHTML = '0' + d.innerHTML[5] + '月' + p[1].innerHTML + '日' + `
                     <span class="specific">${specific}</span>
@@ -1652,6 +1657,7 @@
                 app.style.display = 'block'
                 apps.style.display = 'none'
                 appData.style.display = 'none'
+                window.scrollTo(0,0)
             }
         })
 
@@ -1662,11 +1668,8 @@
         var imgs = document.getElementById('imgs')
         var imgss = document.getElementById('imgss')
         var c2 = document.getElementById('copytop')
-        // console.log(copy[0])
         copy[0].onclick = function () {
-            // console.log(111)
             if (imgs.className == '' || imgss.className == '' || imgs.className == 'actives') {
-                // console.log(imgs)
                 imgs.className = 'actives'
                 imgss.className = 'actives'
                 c1.className = 'city-wrap copytop'
@@ -1680,9 +1683,7 @@
 
         }
         copy[1].onclick = function () {
-            console.log(111)
             if (imgs.className == '' || imgss.className == '') {
-                // console.log(imgs)
                 imgs.className = 'actives'
                 imgss.className = 'actives'
                 c1.className = 'city-wrap copytop'
