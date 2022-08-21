@@ -2698,6 +2698,27 @@
         }
 
 
+        !(function (x) {
+            function w() {
+                var s = x.document,
+                    r = s.documentElement,
+                    a = r.getBoundingClientRect().width;
+                var ratio = (85 * 750) / 640;
+                if (a >= 640) {
+                    r.style.fontSize = '100px';
+                } else {
+                    if (a <= 320) {
+                        r.style.fontSize = '50px';
+                    } else {
+                        r.style.fontSize = (a * ratio) / 750 + 'px';
+                    }
+                }
+            }
+            x.addEventListener('resize', function () {
+                w();
+            });
+            w();
+        })(window);
 
         /* 金钱排序  */
         fixedLi[1].onclick = () => {
